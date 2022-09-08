@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>eath a sketch game</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+    <input onchange="updateGrid(this.value)" type="range" value="16" min="4" max="128" />
+    <button id="clear" onclick="clearGrid(this.value)">Clear</button>
+    
+    <select onchange="this.style.backgroundColor = this.value" class="color">
+      <option id="red" value="red">Red</option>
+      <option id="blue" value="blue">Blue</option>
+      <option id="black" value="black">Black</option>
+      <option id="rainbow" value="'#'+Math.floor(Math.random()*16777215).toString(16)">rainbow</option>
+      <option id="yellow" value="yellow">Yellow</option>
+      <option id="green" value="green">Green</option>
+    </select>
+    <script src="js/main.js"></script>
+  </body>
+</html>
